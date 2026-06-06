@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EP51X Formula Sheet — Entrepreneurial Finance | All 8 Modules</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,700;1,500&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#F4F0EA; --card:#FEFCF8; --text:#27282E; --text-mid:#4A4C58;
+    --text-soft:#8A8CA0; --border:#E0DCD4; --border-soft:#EAE6DE;
+    --fml-bg:#EDEEF2; --fml-border:#D2D5DC; --shadow:0 2px 10px rgba(28,32,48,.07);
+    --r:10px; --rs:6px;
+    --m1:#7A5830; --m1l:#FBF7F0; --m1b:#C8A870;
+    --m2:#3A6A50; --m2l:#EDF8F2; --m2b:#88C0A0;
+    --m3:#3A527A; --m3l:#EDF2F8; --m3b:#88A8D0;
+    --m4:#78486A; --m4l:#F8EDF4; --m4b:#C898B8;
+    --m5:#3A4E78; --m5l:#EDF0F8; --m5b:#8898C8;
+    --m6:#3A6A68; --m6l:#EDF8F7; --m6b:#88C0BE;
+    --m7:#68603A; --m7l:#F8F6EE; --m7b:#C0B880;
+    --m8:#524A7A; --m8l:#F2EFF8; --m8b:#A898D0;
+    --pk:#684050; --pkl:#F8EEF2; --pkb:#C09098;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);font-family:'Nunito',sans-serif;color:var(--text);font-size:15px;line-height:1.65;}
+
+  #pb{position:fixed;top:0;left:0;height:3px;width:0%;z-index:9999;background:linear-gradient(90deg,var(--m1),var(--m2),var(--m3),var(--m5),var(--m8));transition:width .1s;}
+
+  nav{position:sticky;top:0;z-index:100;background:rgba(254,252,248,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);height:50px;display:flex;align-items:center;padding:0 1.4rem;gap:.5rem;box-shadow:0 2px 8px rgba(28,32,48,.06);}
+  .nt{font-family:'Lora',serif;font-size:.87rem;font-weight:700;font-style:italic;color:var(--text);flex-shrink:0;}
+  .ns{color:var(--border);flex-shrink:0;}
+  #nl{display:flex;align-items:center;gap:.2rem;overflow-x:auto;flex:1;scrollbar-width:none;-ms-overflow-style:none;}
+  #nl::-webkit-scrollbar{display:none;}
+  nav a{text-decoration:none;font-size:.68rem;font-weight:700;letter-spacing:.04em;padding:3px 9px;border-radius:20px;white-space:nowrap;flex-shrink:0;transition:all .18s;color:var(--text-mid);}
+  nav a:hover{background:var(--fml-bg);color:var(--text);}
+  .pb{margin-left:auto;flex-shrink:0;background:var(--text);color:#fff;border:none;border-radius:20px;padding:4px 11px;font-size:.68rem;font-weight:700;cursor:pointer;font-family:'Nunito',sans-serif;}
+  .pb:hover{opacity:.8;}
+
+  .hero{background:linear-gradient(135deg,#0E2028 0%,#183840 45%,#244E5E 100%);padding:2.75rem 2rem 2.5rem;text-align:center;position:relative;overflow:hidden;}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 60%,rgba(80,180,160,.08) 0%,transparent 55%),radial-gradient(ellipse at 75% 30%,rgba(180,140,80,.08) 0%,transparent 50%);}
+  .htag{display:inline-block;background:rgba(255,255,255,.12);color:rgba(255,255,255,.85);font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:3px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.22);margin-bottom:.85rem;}
+  .hero h1{font-family:'Lora',serif;color:#fff;font-size:clamp(1.5rem,3.5vw,2.25rem);font-weight:700;line-height:1.22;margin-bottom:.5rem;position:relative;}
+  .hero p{color:rgba(255,255,255,.58);font-size:.87rem;max-width:510px;margin:0 auto 1.2rem;position:relative;}
+  .mpills{display:flex;gap:.35rem;justify-content:center;flex-wrap:wrap;position:relative;}
+  .mpill{padding:3px 9px;border-radius:20px;font-size:.65rem;font-weight:700;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.09);color:rgba(255,255,255,.82);}
+
+  .container{max-width:860px;margin:0 auto;padding:2rem 1.25rem 4rem;}
+  .ms{margin-bottom:2rem;scroll-margin-top:58px;}
+  .mh{display:flex;align-items:center;gap:.65rem;margin-bottom:.95rem;padding-bottom:.55rem;border-bottom:2px solid;flex-wrap:wrap;}
+  .mb{padding:3px 9px;border-radius:4px;font-size:.62rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;flex-shrink:0;}
+  .mh h2{font-family:'Lora',serif;font-size:1.06rem;font-weight:700;line-height:1.2;}
+  .sl{font-size:.63rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--text-soft);margin-bottom:.5rem;}
+  .sub{margin-bottom:.8rem;}
+
+  /* Per-module color sets */
+  .s1 .mh{border-color:var(--m1b);} .s1 .mb{background:var(--m1);} .s1 .mh h2{color:var(--m1);} .s1 .fc-n{color:var(--m1);}
+  .s2 .mh{border-color:var(--m2b);} .s2 .mb{background:var(--m2);} .s2 .mh h2{color:var(--m2);} .s2 .fc-n{color:var(--m2);}
+  .s3 .mh{border-color:var(--m3b);} .s3 .mb{background:var(--m3);} .s3 .mh h2{color:var(--m3);} .s3 .fc-n{color:var(--m3);}
+  .s4 .mh{border-color:var(--m4b);} .s4 .mb{background:var(--m4);} .s4 .mh h2{color:var(--m4);} .s4 .fc-n{color:var(--m4);}
+  .s5 .mh{border-color:var(--m5b);} .s5 .mb{background:var(--m5);} .s5 .mh h2{color:var(--m5);} .s5 .fc-n{color:var(--m5);}
+  .s6 .mh{border-color:var(--m6b);} .s6 .mb{background:var(--m6);} .s6 .mh h2{color:var(--m6);} .s6 .fc-n{color:var(--m6);}
+  .s7 .mh{border-color:var(--m7b);} .s7 .mb{background:var(--m7);} .s7 .mh h2{color:var(--m7);} .s7 .fc-n{color:var(--m7);}
+  .s8 .mh{border-color:var(--m8b);} .s8 .mb{background:var(--m8);} .s8 .mh h2{color:var(--m8);} .s8 .fc-n{color:var(--m8);}
+  .sp .mh{border-color:var(--pkb);} .sp .mb{background:var(--pk);} .sp .mh h2{color:var(--pk);} .sp .fc-n{color:var(--pk);}
+
+  /* GRIDS */
+  .fg{display:grid;grid-template-columns:repeat(2,1fr);gap:.55rem;}
+  .fg1{grid-template-columns:1fr;}
+  .fg3{grid-template-columns:repeat(3,1fr);}
+
+  /* FORMULA CARD */
+  .fc{background:var(--card);border:1px solid var(--border-soft);border-radius:var(--rs);padding:.78rem .9rem;box-shadow:var(--shadow);}
+  .fc-n{font-size:.63rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.38rem;}
+  .fc-eq{background:var(--fml-bg);border:1px solid var(--fml-border);border-radius:4px;padding:.45rem .68rem;font-family:'Lora',serif;font-size:.92rem;font-weight:500;color:var(--text);line-height:1.75;text-align:center;margin-bottom:.38rem;word-break:break-word;}
+  .fc-note{font-size:.75rem;color:var(--text-mid);line-height:1.5;}
+  .fc-note strong{color:var(--text);font-weight:700;}
+
+  /* STAT CHIPS */
+  .sg{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin-bottom:.55rem;}
+  .sc{background:var(--card);border:1px solid var(--border-soft);border-radius:var(--rs);padding:.65rem .75rem;text-align:center;box-shadow:var(--shadow);}
+  .sv{font-family:'Lora',serif;font-size:1.05rem;font-weight:700;margin-bottom:.15rem;}
+  .sl2{font-size:.68rem;color:var(--text-mid);font-weight:600;line-height:1.35;}
+
+  /* MSME TABLE */
+  .mt{width:100%;border-collapse:collapse;font-size:.82rem;}
+  .mt th{padding:6px 10px;font-size:.7rem;font-weight:800;letter-spacing:.05em;color:#fff;background:var(--m7);text-align:left;}
+  .mt th:first-child{border-radius:5px 0 0 0;} .mt th:last-child{border-radius:0 5px 0 0;}
+  .mt td{padding:6px 10px;border-bottom:1px solid var(--border-soft);color:var(--text);}
+  .mt td:first-child{font-weight:700;}
+  .mt tr:last-child td{border-bottom:none;}
+  .mt tr:nth-child(even) td{background:var(--m7l);}
+
+  /* PARAM TABLE */
+  .pt{width:100%;border-collapse:collapse;}
+  .pt th{background:var(--pk);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:7px 10px;text-align:left;}
+  .pt th:first-child{border-radius:5px 0 0 0;} .pt th:last-child{border-radius:0 5px 0 0;}
+  .pt td{padding:6px 10px;font-size:.82rem;border-bottom:1px solid var(--border-soft);vertical-align:middle;}
+  .pt td:first-child{font-family:'Lora',serif;font-weight:700;font-size:.93rem;color:var(--pk);width:80px;}
+  .pt td:nth-child(2){font-weight:700;color:var(--text);width:130px;}
+  .pt td:nth-child(3){color:var(--text-mid);}
+  .pt tr:last-child td{border-bottom:none;}
+  .pt tr:nth-child(even) td{background:var(--pkl);}
+  .fc-wrap{background:var(--card);border:1px solid var(--border-soft);border-radius:var(--rs);overflow:hidden;box-shadow:var(--shadow);}
+
+  footer{background:var(--card);border-top:1px solid var(--border);text-align:center;padding:1rem;font-size:.76rem;color:var(--text-soft);}
+  footer span{color:var(--text-mid);font-weight:700;}
+  #st{position:fixed;bottom:1.5rem;right:1.5rem;width:40px;height:40px;background:var(--text);color:#fff;border:none;border-radius:50%;cursor:pointer;font-size:1rem;box-shadow:0 4px 12px rgba(28,32,48,.2);opacity:0;transition:opacity .3s;z-index:200;}
+  #st.on{opacity:1;}
+
+  @media print{nav,#pb,#st,footer,.pb{display:none!important;}body{background:#fff;font-size:11.5px;}.container{padding:0;max-width:100%;}.ms{break-inside:avoid;margin-bottom:1rem;}.fc{box-shadow:none;}.hero{background:#0E2028;-webkit-print-color-adjust:exact;print-color-adjust:exact;padding:1rem;}}
+
+  @media(max-width:768px){nav{padding:0 .9rem;}.fg3{grid-template-columns:1fr 1fr;}.sg{grid-template-columns:repeat(2,1fr);}.container{padding:1.5rem 1rem 3rem;}.hero{padding:2.25rem 1.25rem;}.hero h1{font-size:1.4rem;}}
+  @media(max-width:520px){body{font-size:14px;}nav{padding:0 .7rem;height:46px;}.nt{font-size:.75rem;}.ns{display:none;}nav a{font-size:.62rem;padding:3px 6px;}.pb{display:none;}.container{padding:1.25rem .85rem 2.5rem;}.hero{padding:1.75rem 1rem;}.hero h1{font-size:1.25rem;}.hero p{font-size:.8rem;}.fg,.fg3,.fg1{grid-template-columns:1fr;}.sg{grid-template-columns:1fr 1fr;}.fc{padding:.68rem .8rem;}.fc-eq{font-size:.85rem;}.fc-note{font-size:.72rem;}.mh h2{font-size:.95rem;}.mb{font-size:.58rem;}}
+  @media(max-width:360px){.nt{display:none;}.container{padding:1rem .72rem 2rem;}.hero h1{font-size:1.12rem;}.sg{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div id="pb"></div>
+
+<nav>
+  <span class="nt">EP51X Formulas</span>
+  <span class="ns">|</span>
+  <div id="nl">
+    <a href="#m1">M1 Foundations</a>
+    <a href="#m2">M2 Valuation</a>
+    <a href="#m3">M3 Modelling</a>
+    <a href="#m4">M4 Term Sheets</a>
+    <a href="#m5">M5 Exits</a>
+    <a href="#m6">M6 Fundraising</a>
+    <a href="#m7">M7 Legal</a>
+    <a href="#m8">M8 Governance</a>
+    <a href="#params">Params</a>
+  </div>
+  <button class="pb" onclick="window.print()">⎙ Print</button>
+</nav>
+
+<div class="hero">
+  <div class="htag">EP51X · Entrepreneurial Finance &amp; Venture Funding</div>
+  <h1>Complete Formula Sheet · All 8 Modules</h1>
+  <p>Every formula, quantitative rule, statutory threshold, and key number — organised by module and section.</p>
+  <div class="mpills">
+    <span class="mpill">M1 Foundations</span>
+    <span class="mpill">M2 Valuation</span>
+    <span class="mpill">M3 Cash Flow</span>
+    <span class="mpill">M4 Term Sheets</span>
+    <span class="mpill">M5 Exits</span>
+    <span class="mpill">M6 Fundraising</span>
+    <span class="mpill">M7 Legal</span>
+    <span class="mpill">M8 Governance</span>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ══ M1 ══ -->
+<div class="ms s1" id="m1">
+  <div class="mh"><span class="mb">Module 1</span><h2>Foundations of Entrepreneurial Finance &amp; Venture Funding</h2></div>
+  <div class="sub"><div class="sl">1.4 · Share Capital &amp; Wealth Formulas</div>
+  <div class="fg">
+    <div class="fc"><div class="fc-n">Net Worth (Book Equity)</div>
+      <div class="fc-eq">Net Worth = Equity Share Capital + Reserves &amp; Surplus</div>
+      <div class="fc-note">Represents the book value of all equity. Also the denominator for Book Value per Share. Used in P/B valuation multiples. <strong>Reserves &amp; Surplus</strong> = retained earnings from past profits.</div></div>
+    <div class="fc"><div class="fc-n">Book Value per Share</div>
+      <div class="fc-eq">Book Value/Share = Net Worth ÷ Shares Outstanding</div>
+      <div class="fc-note">The accounting value of one equity share. Benchmark for P/B ratio. Compare with market price to determine if a stock trades at a premium or discount to book.</div></div>
+    <div class="fc"><div class="fc-n">Market Capitalisation</div>
+      <div class="fc-eq">Market Cap = Market Price per Share × Total Outstanding Shares</div>
+      <div class="fc-note">The total market value of a company's equity. Reflects investor expectations about future earnings. Early-stage startups have no public market price — value is negotiated.</div></div>
+  </div></div>
+</div>
+
+<!-- ══ M2 ══ -->
+<div class="ms s2" id="m2">
+  <div class="mh"><span class="mb">Module 2</span><h2>Startup Valuation &amp; Investment Decision Framework</h2></div>
+
+  <div class="sub"><div class="sl">2.3 · Accounting Valuation Multiples</div>
+  <div class="fg">
+    <div class="fc"><div class="fc-n">Earnings Per Share (EPS)</div>
+      <div class="fc-eq">EPS = Profit After Tax (PAT) ÷ Number of Equity Shares</div>
+      <div class="fc-note"><strong>PAT</strong> = net profit after all taxes and interest. EPS is the denominator for the P/E ratio and measures per-share profitability. Cannot be calculated for loss-making startups.</div></div>
+    <div class="fc"><div class="fc-n">Price-to-Earnings (P/E) Ratio</div>
+      <div class="fc-eq">P/E = Current Market Price ÷ EPS</div>
+      <div class="fc-note">Compares market price to earnings. Higher P/E = higher growth expectations. <strong>Industry clustering:</strong> firms in the same sector share similar P/E bands. Unusable when EPS is negative.</div></div>
+    <div class="fc"><div class="fc-n">Price-to-Book (P/B) Ratio</div>
+      <div class="fc-eq">P/B = Current Market Price ÷ Book Value per Share</div>
+      <div class="fc-note">Compares market price to net worth per share. P/B &gt; 1 means the market values the company above its accounting assets. Common for banks and asset-heavy businesses.</div></div>
+    <div class="fc"><div class="fc-n">Equity Value from Enterprise Value</div>
+      <div class="fc-eq">Equity Value = Enterprise Value (EV) − Liabilities (Debt + Pref. Shares)</div>
+      <div class="fc-note">EV captures total firm value (debt + equity). Stripping out liabilities gives the <strong>Equity Value</strong> — the market value attributable purely to shareholders.</div></div>
+  </div></div>
+
+  <div class="sub"><div class="sl">2.4 · Pre/Post-Money Valuation &amp; Dilution</div>
+  <div class="fg">
+    <div class="fc"><div class="fc-n">Post-Money Valuation</div>
+      <div class="fc-eq">Post-Money Valuation = Investment Amount ÷ Equity % Acquired</div>
+      <div class="fc-note">The notional total value of the company <em>after</em> the new cash is injected. If an investor pays ₹2 Cr for 20%, Post-Money = ₹2 Cr ÷ 20% = <strong>₹10 Cr</strong>.</div></div>
+    <div class="fc"><div class="fc-n">Pre-Money Valuation</div>
+      <div class="fc-eq">Pre-Money Valuation = Post-Money Valuation − Investment Amount</div>
+      <div class="fc-note">Value of the company's existing assets before new cash arrives. In the example above, Pre-Money = ₹10 Cr − ₹2 Cr = <strong>₹8 Cr</strong>. Rising pre-money across rounds = market validation.</div></div>
+    <div class="fc"><div class="fc-n">Required Equity % at Exit</div>
+      <div class="fc-eq">Required Exit Equity % = Target Cash Return ÷ Exit Valuation</div>
+      <div class="fc-note">The investor's percentage stake needed at exit to hit their return target. e.g., if target = ₹16 Cr and exit value = ₹40 Cr, investor needs <strong>40%</strong> at exit.</div></div>
+    <div class="fc"><div class="fc-n">Entry Equity % (Dilution-Adjusted)</div>
+      <div class="fc-eq">Entry Equity % = Target Exit Equity % ÷ (1 − Future Dilution %)</div>
+      <div class="fc-note">Accounts for future dilution from subsequent funding rounds. If the investor wants 40% at exit but expects 25% future dilution, they need <strong>40% ÷ 75% = 53.3%</strong> at entry.</div></div>
+  </div></div>
+</div>
+
+<!-- ══ M3 ══ -->
+<div class="ms s3" id="m3">
+  <div class="mh"><span class="mb">Module 3</span><h2>Financial Modelling, Cash Flow Planning &amp; Funding Estimation</h2></div>
+  <div class="sub"><div class="sl">3.3–3.5 · Centre Economics &amp; Funding Formulas</div>
+  <div class="fg">
+    <div class="fc"><div class="fc-n">Associate Capacity (Kareer Sciences)</div>
+      <div class="fc-eq">Capacity = 160 hrs/month ÷ 16 hrs/client = 10 clients per associate</div>
+      <div class="fc-note"><strong>160 hrs</strong> = working hours per associate per month. <strong>16 hrs</strong> = engagement hours required per client. One associate can handle a maximum of <strong>10 clients</strong> per month.</div></div>
+    <div class="fc"><div class="fc-n">Associates Required</div>
+      <div class="fc-eq">Associates Required = Active Clients ÷ 10</div>
+      <div class="fc-note">Staff headcount is driven strictly by client acquisition, not by management preference. Rounding up is mandatory — you cannot have a fractional associate.</div></div>
+    <div class="fc"><div class="fc-n">Monthly Revenue</div>
+      <div class="fc-eq">Monthly Revenue = No. of Clients × Fee per Client (₹25,000)</div>
+      <div class="fc-note">100% of revenue collected in the same month (zero accounts receivable assumption). Scales linearly with client count up to the centre capacity cap of <strong>150 clients</strong>.</div></div>
+    <div class="fc"><div class="fc-n">Total Funding Requirement</div>
+      <div class="fc-eq">Total Funding = (Peak Deficit × Centres) + (Infra Cost × Centres) + Tech Investment</div>
+      <div class="fc-note"><strong>Peak Deficit</strong> = highest cumulative cash shortfall per centre. <strong>Infra Cost</strong> = ₹26 L/centre. <strong>Tech Investment</strong> = ₹10 Cr one-time cost for the "Crazy" path only — breaks the linear scaling relationship.</div></div>
+  </div></div>
+</div>
+
+<!-- ══ M4 ══ -->
+<div class="ms s4" id="m4">
+  <div class="mh"><span class="mb">Module 4</span><h2>Term Sheets &amp; Investment Deal Structuring</h2></div>
+  <div class="sub"><div class="sl">4.2–4.5 · Key Structuring Rules &amp; Thresholds</div>
+  <div class="fg">
+    <div class="fc"><div class="fc-n">Convertible Discount to Next Round</div>
+      <div class="fc-eq">Conversion Price = Next Round Price × (1 − 20%)</div>
+      <div class="fc-note">Investors who accept a convertible note receive a <strong>20% discount</strong> to the price discovered in the next qualified funding round. Compensates early investors for bearing higher risk before valuation is set.</div></div>
+    <div class="fc"><div class="fc-n">Liquidation Preference — Non-Participating</div>
+      <div class="fc-eq">Investor receives MAX( 1× or 2× Capital , Equity % × Sale Price )</div>
+      <div class="fc-note">Investor <strong>chooses</strong> the higher of their guaranteed return or their equity share of proceeds. Cannot double-dip — must pick one. Protects downside without capping upside if equity value is higher.</div></div>
+    <div class="fc"><div class="fc-n">Liquidation Preference — Participating</div>
+      <div class="fc-eq">Investor receives (1× or 2× Capital) PLUS (Equity % × Remaining Proceeds)</div>
+      <div class="fc-note">Investor gets their guaranteed multiple <strong>first</strong>, then also participates in the remaining proceeds proportionally. More aggressive — founder receives residual only after investor's double benefit.</div></div>
+    <div class="fc"><div class="fc-n">Anti-Dilution: Full Ratchet</div>
+      <div class="fc-eq">New Conversion Price = New (Lower) Round Price</div>
+      <div class="fc-note">In a <strong>down round</strong>, early investor's conversion price resets fully to the new lower price. Harshest for founders — maximum founder dilution. Investor's % stake increases to compensate for valuation drop.</div></div>
+  </div>
+  <div class="fg" style="margin-top:.55rem;">
+    <div class="fc"><div class="fc-n">Anti-Dilution: Weighted Average</div>
+      <div class="fc-eq">New Price = (Old Shares × Old Price + New Shares × New Price) ÷ Total Shares</div>
+      <div class="fc-note">Blended average between old and new price. Fairer — dilution pain <strong>shared</strong> between founder and investor. Broad-based (includes all shares) is the market standard; narrow-based is more investor-friendly.</div></div>
+    <div class="fc"><div class="fc-n">Term Sheet Exclusivity Window</div>
+      <div class="fc-eq">Exclusivity Period = 30 to 90 days (legally binding)</div>
+      <div class="fc-note">The only <strong>legally binding</strong> clauses in an otherwise non-binding term sheet are: <strong>Exclusivity, Confidentiality, and Governing Law</strong>. All other investment terms remain negotiable until the SHA/SPA is signed.</div></div>
+  </div></div>
+</div>
+
+<!-- ══ M5 ══ -->
+<div class="ms s5" id="m5">
+  <div class="mh"><span class="mb">Module 5</span><h2>Exit Strategies &amp; Investor Returns</h2></div>
+  <div class="sub"><div class="sl">5.3–5.5 · Exit Mechanism Key Numbers</div>
+  <div class="sg" style="grid-template-columns:repeat(4,1fr);">
+    <div class="sc"><div class="sv" style="color:var(--m5);">7–10%</div><div class="sl2">IPO Cost as % of issue proceeds</div></div>
+    <div class="sc"><div class="sv" style="color:var(--m5);">8–12 mo</div><div class="sl2">IPO timeline to completion</div></div>
+    <div class="sc"><div class="sv" style="color:var(--m5);">25%</div><div class="sl2">Max buyback limit — Companies Act §68</div></div>
+    <div class="sc"><div class="sv" style="color:var(--m5);">~1 mo</div><div class="sl2">Trade sale closure (vs IPO)</div></div>
+  </div>
+  <div class="fg">
+    <div class="fc"><div class="fc-n">Self-Liquidating Instrument Return</div>
+      <div class="fc-eq">Return = 3× to 4× Capital &nbsp; redeemed over ~5 years from cash flows</div>
+      <div class="fc-note">Used in underdeveloped capital markets where IPOs/M&A are rare. Preference shares or convertible loans are redeemed directly from operating cash flows — no third-party buyer required.</div></div>
+    <div class="fc"><div class="fc-n">Exit Preference — Ranking</div>
+      <div class="fc-eq">IPO &gt; Trade Sale &gt; Secondary Purchase &gt; Buyback</div>
+      <div class="fc-note"><strong>IPO</strong>: highest return, highest cost/time. <strong>Trade Sale</strong>: fast, cheaper, founder exits. <strong>Secondary</strong>: founder retains control. <strong>Buyback</strong>: least preferred — capped at 25% by law and requires company cash.</div></div>
+  </div></div>
+</div>
+
+<!-- ══ M6 ══ -->
+<div class="ms s6" id="m6">
+  <div class="mh"><span class="mb">Module 6</span><h2>Startup Fundraising &amp; Investor Engagement</h2></div>
+  <div class="sub"><div class="sl">6.1–6.2 · Cash Flow &amp; Capital Hierarchy Formulas</div>
+  <div class="fg">
+    <div class="fc"><div class="fc-n">Operating Cash Flow (OCF)</div>
+      <div class="fc-eq">OCF = PAT + Depreciation &amp; Amortisation + Interest − ΔWorking Capital</div>
+      <div class="fc-note"><strong>PAT</strong> is the starting point. Add back non-cash expenses (D&amp;A) and financing costs (Interest). Subtract the increase in working capital trapped in operations. OCF &gt; 0 means the business generates cash.</div></div>
+    <div class="fc"><div class="fc-n">Funding Priority Hierarchy</div>
+      <div class="fc-eq">Internal Accruals → Debt (8–18%) → Equity (most dilutive)</div>
+      <div class="fc-note">Equity is the <strong>most expensive</strong> form of capital — investors demand high returns and dilute ownership. Exhaust internal accruals and affordable debt before raising equity. Add <strong>10–15% contingency buffer</strong> to any capital estimate.</div></div>
+    <div class="fc"><div class="fc-n">Market Sizing Framework</div>
+      <div class="fc-eq">TAM ⊃ SAM ⊃ SOM &nbsp; (nested subsets)</div>
+      <div class="fc-note"><strong>TAM</strong> = Total Addressable Market (global potential). <strong>SAM</strong> = Serviceable Addressable Market (target geography/segment). <strong>SOM</strong> = Serviceable Obtainable Market (realistic capture). Investors test SOM rigorously.</div></div>
+    <div class="fc"><div class="fc-n">Target Investor Exit Multiple</div>
+      <div class="fc-eq">Target Return = 4× to 5× Invested Capital within 4–5 years</div>
+      <div class="fc-note">Standard benchmark for growth-stage VC/PE. The pitch must show a clear financial trajectory demonstrating how the company valuation will grow to deliver this multiple. Early-stage angels may demand <strong>10× or higher</strong>.</div></div>
+  </div></div>
+</div>
+
+<!-- ══ M7 ══ -->
+<div class="ms s7" id="m7">
+  <div class="mh"><span class="mb">Module 7</span><h2>Legal Foundations of Start-up Incorporation &amp; Compliance</h2></div>
+
+  <div class="sub"><div class="sl">7.2 · MSME Registration Thresholds (UDYAM)</div>
+  <div class="fc-wrap">
+  <div style="overflow-x:auto;"><table class="mt">
+    <tr><th>Category</th><th>Plant &amp; Machinery Investment</th><th>Annual Turnover</th></tr>
+    <tr><td>Micro Enterprise</td><td>≤ ₹2.5 Crores</td><td>≤ ₹10 Crores</td></tr>
+    <tr><td>Small Enterprise</td><td>≤ ₹25 Crores</td><td>≤ ₹100 Crores</td></tr>
+    <tr><td>Medium Enterprise</td><td>≤ ₹125 Crores</td><td>≤ ₹500 Crores</td></tr>
+  </table></div></div></div>
+
+  <div class="sub"><div class="sl">7.2–7.5 · Key Statutory Numbers</div>
+  <div class="sg" style="grid-template-columns:repeat(4,1fr);margin-bottom:.55rem;">
+    <div class="sc"><div class="sv" style="color:var(--m7);">₹100 Cr</div><div class="sl2">DPIIT max turnover (any prior year)</div></div>
+    <div class="sc"><div class="sv" style="color:var(--m7);">10 yrs</div><div class="sl2">DPIIT recognition validity from incorporation</div></div>
+    <div class="sc"><div class="sv" style="color:var(--m7);">45 days</div><div class="sl2">Max days to clear MSME dues</div></div>
+    <div class="sc"><div class="sv" style="color:var(--m7);">75%</div><div class="sl2">Special Resolution majority for Private Placement</div></div>
+  </div>
+  <div class="fg">
+    <div class="fc"><div class="fc-n">Shareholder Borrowing Limit</div>
+      <div class="fc-eq">Max Borrowing = 100% × (Paid-up Capital + Free Reserves + Securities Premium)</div>
+      <div class="fc-note">Private companies cannot borrow from shareholders beyond this cap. <strong>Exception:</strong> DPIIT-recognised startups are exempt from this limit for their <strong>first 5 years</strong>.</div></div>
+    <div class="fc"><div class="fc-n">Convertible Note Parameters</div>
+      <div class="fc-eq">Min Ticket: ₹25 Lakhs per investor · Max Maturity: 10 years</div>
+      <div class="fc-note">Only DPIIT-recognised startups can issue CNs. No upfront valuation report needed — priced at the next qualified funding round. Requires Board + General Meeting approval and MGT-14 filing.</div></div>
+  </div></div>
+
+  <div class="sub"><div class="sl">7.4 · Key Compliance Timelines</div>
+  <div class="fg fg3">
+    <div class="fc"><div class="fc-n">Board Meetings</div>
+      <div class="fc-eq">Min 4/year · Max 120-day gap</div>
+      <div class="fc-note">First board meeting within <strong>30 days</strong> of incorporation. First auditor appointed within 30 days; Form ADT-1 within 15 days of appointment.</div></div>
+    <div class="fc"><div class="fc-n">Annual General Meeting (AGM)</div>
+      <div class="fc-eq">First AGM: 9 months · Subsequent: 6 months after FY close</div>
+      <div class="fc-note">Form AOC-4 (financials) filed within 30 days of AGM. Form MGT-7 (annual return) filed within 60 days of AGM.</div></div>
+    <div class="fc"><div class="fc-n">ESOP Cliff &amp; Vesting</div>
+      <div class="fc-eq">Minimum cliff: 1 year from grant date before any vesting</div>
+      <div class="fc-note">DPIIT-registered startups can issue ESOPs to promoters/directors for <strong>10 years</strong> (standard companies cannot). Exercise converts options into equity shares.</div></div>
+  </div></div>
+</div>
+
+<!-- ══ M8 ══ -->
+<div class="ms s8" id="m8">
+  <div class="mh"><span class="mb">Module 8</span><h2>Legal Framework &amp; Governance in Venture Capital</h2></div>
+  <div class="sub"><div class="sl">8.2 · VC Fund Regulatory Parameters (SEBI AIF)</div>
+  <div class="sg" style="grid-template-columns:repeat(4,1fr);margin-bottom:.55rem;">
+    <div class="sc"><div class="sv" style="color:var(--m8);">₹5 Cr</div><div class="sl2">Min committed corpus for an AIF fund</div></div>
+    <div class="sc"><div class="sv" style="color:var(--m8);">₹5 L</div><div class="sl2">Min investment accepted from any single LP</div></div>
+    <div class="sc"><div class="sv" style="color:var(--m8);">25%</div><div class="sl2">Max corpus invested in a single portfolio company</div></div>
+    <div class="sc"><div class="sv" style="color:var(--m8);">~20%</div><div class="sl2">Carried interest (VC profit share after returns)</div></div>
+  </div>
+  <div class="fg">
+    <div class="fc"><div class="fc-n">Post-Money Valuation (reiterated)</div>
+      <div class="fc-eq">Post-Money = Pre-Money Valuation + Investment Amount</div>
+      <div class="fc-note">Preferred instrument in India: <strong>CCPS (Compulsorily Convertible Preference Shares)</strong>. Provides liquidation preference and other protective rights until conversion — avoiding immediate equity-level risk.</div></div>
+    <div class="fc"><div class="fc-n">Transfer Restriction Rights</div>
+      <div class="fc-eq">ROFR: Founder must match investor offer · ROFO: Founder must ask investor first</div>
+      <div class="fc-note"><strong>Right of First Refusal (ROFR)</strong>: existing investor matches any third-party offer. <strong>Right of First Offer (ROFO)</strong>: founder must offer shares to investor before the open market. Both restrict share transfers.</div></div>
+    <div class="fc"><div class="fc-n">Tag-Along vs. Drag-Along</div>
+      <div class="fc-eq">Tag-Along: Investor joins founder's sale on same terms · Drag-Along: Investor forces founder to sell</div>
+      <div class="fc-note"><strong>Tag-Along</strong> protects minorities — they exit alongside the founder at identical terms. <strong>Drag-Along</strong> protects majorities — investor can force a full company sale if a strategic acquirer demands 100% control.</div></div>
+    <div class="fc"><div class="fc-n">Private Limited Company — Key Limit</div>
+      <div class="fc-eq">Maximum 200 shareholders · Best structure for VC fundraising</div>
+      <div class="fc-note">Provides <strong>limited liability, separate legal entity status, and clean cap tables</strong>. Allows ESOPs and FDI. Highest compliance burden but preferred by institutional VCs and for regulatory purposes.</div></div>
+  </div></div>
+</div>
+
+<!-- ══ PARAMETERS ══ -->
+<div class="ms sp" id="params">
+  <div class="mh"><span class="mb">Reference</span><h2>Key Parameters, Ratios &amp; Statutory Glossary</h2></div>
+  <div class="fc-wrap">
+  <div style="overflow-x:auto;"><table class="pt">
+    <tr><th>Term</th><th>Value / Range</th><th>Meaning &amp; Context</th></tr>
+    <tr><td>EPS</td><td>PAT ÷ Shares</td><td>Earnings Per Share — basis for P/E ratio; unusable when company is loss-making</td></tr>
+    <tr><td>P/E</td><td>Price ÷ EPS</td><td>Price-to-Earnings — higher P/E signals higher growth expectations; industry-specific</td></tr>
+    <tr><td>P/B</td><td>Price ÷ BV/Share</td><td>Price-to-Book — useful for asset-heavy sectors; P/B &gt; 1 means premium to book value</td></tr>
+    <tr><td>EV</td><td>Equity + Debt + Pref.</td><td>Enterprise Value — total firm value. EV/EBITDA used when firm is profitable; EV/Sales when EBITDA is negative</td></tr>
+    <tr><td>Post-$</td><td>Inv. ÷ Eq. %</td><td>Post-Money Valuation — notional company value after investment is made</td></tr>
+    <tr><td>Pre-$</td><td>Post − Inv.</td><td>Pre-Money Valuation — company value before cash injection; rising Pre-$ = market validation</td></tr>
+    <tr><td>Dilution</td><td>% reduction in stake</td><td>Founder's ownership % drops when new shares issued; absolute value increases if valuation grows</td></tr>
+    <tr><td>OCF</td><td>PAT + D&amp;A − ΔWC</td><td>Operating Cash Flow — cash generated from core operations; primary source for debt servicing</td></tr>
+    <tr><td>TAM/SAM/SOM</td><td>Nested subsets</td><td>Total / Serviceable / Obtainable market. Investors scrutinize SOM for realistic near-term capture</td></tr>
+    <tr><td>CCPS</td><td>Preferred instrument</td><td>Compulsorily Convertible Preference Shares — standard VC instrument in India; gives liquidation preference</td></tr>
+    <tr><td>DPIIT</td><td>≤ ₹100 Cr turnover</td><td>Startup recognition granting ESOP-to-promoters, convertible notes, FEMA relaxations, tax holidays</td></tr>
+    <tr><td>MSME-Micro</td><td>≤ ₹2.5Cr / ≤ ₹10Cr</td><td>Investment in plant &amp; machinery / Annual turnover thresholds for Micro Enterprise classification</td></tr>
+    <tr><td>Carry</td><td>~20% of profits</td><td>VC fund's carried interest — profit-sharing above hurdle rate; primary incentive for fund managers</td></tr>
+    <tr><td>Cliff</td><td>≥ 1 year</td><td>ESOP cliff — minimum period before any vesting commences; law mandates 1 year from grant date</td></tr>
+    <tr><td>IPO Cost</td><td>7–10% proceeds</td><td>Brokerage, merchant banker, legal fees consumed from IPO proceeds; timeline is 8–12 months</td></tr>
+    <tr><td>Buyback Cap</td><td>25% of share capital</td><td>Companies Act §68 — company cannot buyback more than 25% of its own paid-up equity + free reserves</td></tr>
+  </table></div></div>
+</div>
+
+</div><!-- /container -->
+
+<footer>
+  <p>EP51X · Entrepreneurial Finance &amp; Venture Funding · Formula Sheet &nbsp;|&nbsp; Built for <span>AceDBE</span> &nbsp;·&nbsp; Use ⎙ Print to save as PDF</p>
+</footer>
+
+<button id="st" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>
+  window.addEventListener('scroll',()=>{
+    const d=document.documentElement;
+    document.getElementById('pb').style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight)*100)+'%';
+    document.getElementById('st').classList.toggle('on',d.scrollTop>300);
+  });
+</script>
+</body>
+</html>
